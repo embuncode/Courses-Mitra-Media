@@ -1,0 +1,8 @@
+.content-wrapper {
+	min-height: 100%;
+}
+
+.recent-work-wrap img {
+    width: 100px;
+    height: 2000px;
+}
