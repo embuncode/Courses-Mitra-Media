@@ -56,17 +56,18 @@
                <i class="fa fa-suitcase"></i> <span>Paket Kursus</span>
             </a>
          </li>
+
          <li>
-            <a href="/partner" data-render="true">
+            <a href="/kerjasama" data-render="true">
                <i class="fa fa-handshake-o"></i> <span>Kerja Sama</span>
             </a>
          </li>
 
-        <li>
-          <a href="/komentar" data-render="true">
-            <i class="fa fa-phone-square"></i> <span>Komentar</span>
-          </a>
-        </li>
+         <li>
+            <a href="/pengaturan" data-render="true">
+               <i class="fa fa-cog"></i> <span>Pengaturan</span>
+            </a>
+         </li>
 
         <li>
           <a href="/login" data-render="true">

@@ -3403,3 +3403,29 @@ h6 {
 #address {
     background-color: #EC5538;
 }
+
+/*===== Top Trainer ======*/
+.wrap-hubungi-area {
+    background-color: #e3e8e0;
+    border-top: solid 16px #f7ac06;
+    padding: 38px 0px 38px 0px;
+    text-align: center;
+}
+
+
+/*========= Chat Whatsapp ========*/
+.float{
+    position:fixed;
+    padding-top: 13px;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}

@@ -81,6 +81,14 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::PATCH('/kategori/{kategori}', 'KategoriController@update');
 	Route::delete('/kategori/{kategori}', 'KategoriController@destroy');
 	
+	// Kategori
+	Route::get('/kerjasama', 'KerjasamaController@index');
+	Route::get('/kerjasama/apiKerjasama', 'KerjasamaController@apiKerjasama');
+	Route::post('/kerjasama', 'KerjasamaController@store');
+	Route::get('/kerjasama/{kerjasama}/edit', 'KerjasamaController@edit');
+	Route::PATCH('/kerjasama/{kerjasama}', 'KerjasamaController@update');
+	Route::delete('/kerjasama/{kerjasama}', 'KerjasamaController@destroy');
+
 	// pesan
 	Route::get('/pesan', 'PesanController@notif');
 	Route::get('/pesan/apiPesan', 'PesanController@apiPesan');
@@ -107,26 +115,12 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/paket_kursus/detail/{id}', 'PaketKursusController@show');
 	Route::delete('/paket_kursus/{paket_kursus}', 'PaketKursusController@destroy');
 
-	Route::get('/paket2', 'Paket2Controller@index');
-	Route::get('/paket2/apiPaket2', 'Paket2Controller@apiPaket2');
-	Route::post('/paket2', 'Paket2Controller@store');
-	Route::get('/paket2/{paket2}/edit', 'Paket2Controller@edit');
-	Route::PATCH('/paket2/{paket2}', 'Paket2Controller@update');
-	Route::delete('/paket2/{paket2}', 'Paket2Controller@destroy');
-
-	Route::get('/paket3', 'Paket3Controller@index');
-	Route::get('/paket3/apiPaket3', 'Paket3Controller@apiPaket3');
-	Route::post('/paket3', 'Paket3Controller@store');
-	Route::get('/paket3/{paket3}/edit', 'Paket3Controller@edit');
-	Route::PATCH('/paket3/{paket3}', 'Paket3Controller@update');
-	Route::delete('/paket3/{paket3}', 'Paket3Controller@destroy');
-
-	Route::get('/paket4', 'Paket4Controller@index');
-	Route::get('/paket4/apiPaket4', 'Paket4Controller@apiPaket4');
-	Route::post('/paket4', 'Paket4Controller@store');
-	Route::get('/paket4/{paket4}/edit', 'Paket4Controller@edit');
-	Route::PATCH('/paket4/{paket4}', 'Paket4Controller@update');
-	Route::delete('/paket4/{paket4}', 'Paket4Controller@destroy');
+	Route::get('/pengaturan', 'PengaturanController@index');
+	Route::get('/pengaturan/apiPengaturan', 'PengaturanController@apiPengaturan');
+	Route::post('/pengaturan', 'PengaturanController@store');
+	Route::get('/pengaturan/{pengaturan}/edit', 'PengaturanController@edit');
+	Route::PATCH('/pengaturan/{pengaturan}', 'PengaturanController@update');
+	Route::delete('/pengaturan/{pengaturan}', 'PengaturanController@destroy');
 
 });
 
@@ -134,7 +128,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/profil', 'UserController@profile');
 Route::get('/user/contact', 'PesanController@store');
 Route::get('/alumni', 'UserController@alumni');
-Route::get('/pengajar', 'UserController@pengajar');
+// Route::get('/pengajar', 'UserController@pengajar');
 Route::get('/kontak/detail/{id}', 'UserController@detail');
 
 Route::get('/berita', 'UserController@berita');

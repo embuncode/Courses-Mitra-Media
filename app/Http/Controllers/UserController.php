@@ -25,13 +25,14 @@ class UserController extends Controller
     {
         $alumni = Alumni::all();
         $paketkursus = PaketKursus::all();
+        $pengajars = DB::table('pengajars')->paginate(6);
 
-        return view('template.index', compact('alumni', 'paketkursus'));
+        return view('template.index', compact('alumni', 'paketkursus', 'pengajars'));
     }
 
     public function profile()
     {
-        return view ('user.profile');
+        return view ('profil.index');
     }
 
     public function events()
