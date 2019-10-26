@@ -36,7 +36,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             {{session('success')}}
 		</div> 
-		@endif 
+        @endif 
 
         <div class="row">
           	<div class="col-lg-4">
@@ -61,36 +61,33 @@
             	</div>
           	</div>
           
-          	<div class="col-lg-8">
-            	<form class="" action="/kontak/kirim" method="post">
-            		{{ csrf_field() }}
-              		<div class="col-md-6">
-                		<div class="form-group">
-                  			<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" required/>
-                		</div>
-                
-                		<div class="form-group">
-                  			<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" required/>
-                		</div>
-                
-                		<div class="form-group">
-                  			<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" required/>
-                		</div>
-              		</div>
-              	
-              		<div class="col-md-6">
-                		<div class="form-group">
-                  			<textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" required></textarea>
-                		</div>
-              		</div>
-
-              		<div class="col-md-12 text-right">
-                		<button type="submit" value="submit" class="btn primary-btn">
-                  			Send Message
-                		</button>
-              		</div>
-            	</form>
-          	</div>
+          
+            <div class="col-lg-8">
+            <form class="row contact_form" action="/pesan/store" method="post">
+                {{ csrf_field() }}
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" type="text" placeholder="Tulis Nama" name="name" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" type="email" name="email" placeholder="Tulis Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" type="text" name="subject" placeholder="Tulis Subject"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" placeholder="Tulis Pesan"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 text-right">
+                    <button type="submit" value="submit" class="btn primary-btn">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
         </div>
     </div>
 </section>

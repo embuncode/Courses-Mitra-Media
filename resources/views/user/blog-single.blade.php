@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="comment-content" style="border-color: blue;">
                                         <h5>{{ $komentar->nama }}</h5>
-                                        <p>All users on MySpace will know that there are millions of people out there. Every day besides so many people joining this community, there are many others who will be looking out for friends.</p>
+                                        <p>{{ $komentar->komentar }}</p>
                                     </div>
                                     <div class="comment-count">
                                         <a href="#"><i class="fa fa-heart"></i> 15</a>
@@ -121,7 +121,7 @@
                     </div>
 
 
-                    <div class="widget archieve">
+                    <!-- <div class="widget archieve">
                         <h3>Categories</h3>
                         <div class="row">
                             <div class="col-sm-12">
@@ -133,7 +133,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="widget popular_post">
                         <h3>Popular Post</h3>

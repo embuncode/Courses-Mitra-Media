@@ -8,7 +8,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="banner_content text-center">
+              <div class="banner_content">
                 <h2 class="text-uppercase">
                   LKP. MITRA MEDIA
                 </h2>
@@ -16,8 +16,8 @@
                   LEMBAGA KURSUS DAN PELATIHAN KOMPUTER DAN JARINGAN
                 </p>
                 <div>
-                  <a href="#" class="primary-btn2 mb-3 mb-sm-0">contact us</a>
-                  <a href="#" class="primary-btn ml-sm-3 ml-0">see course</a>
+                  <a href="#" class="primary-btn2 mb-3 mb-sm-0">Kontak Kami</a>
+                  <a href="#" class="primary-btn ml-sm-3 ml-0">Lihat Kursus</a>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="single_feature">
-              <div class="icon"><img src="{{ url ('mitra/fonts/responsive.svg') }}" height="50px" width="50px" alt=""></span></div>
+              <div class="icon text-center"><img src="{{ url ('mitra/fonts/responsive.svg') }}" height="50px" width="50px" alt=""></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Alat Yang Memadai</h4>
                 <p>
@@ -54,7 +54,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="single_feature">
-              <div class="icon"><img src="{{ url ('mitra/fonts/css.svg') }}" height="50px" width="50px" alt=""></span></div>
+              <div class="icon text-center"><img src="{{ url ('mitra/fonts/css.svg') }}" height="50px" width="50px" alt=""></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Modul dan Konsultasi</h4>
                 <p>
@@ -66,7 +66,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="single_feature">
-              <div class="icon"><img src="{{ url ('mitra/fonts/house.svg') }}" height="50px" width="50px" alt=""></span></div>
+              <div class="icon text-center"><img src="{{ url ('mitra/fonts/house.svg') }}" height="50px" width="50px" alt=""></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Tempat Strategis</h4>
                 <p>
@@ -78,7 +78,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="single_feature">
-              <div class="icon"><img src="{{ url ('mitra/fonts/wifi.svg') }}" height="50px" width="50px" alt=""></span></div>
+              <div class="icon text-center"><img src="{{ url ('mitra/fonts/wifi.svg') }}" height="50px" width="50px" alt=""></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Akses Internet</h4>
                 <p>
@@ -90,7 +90,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="single_feature">
-              <div class="icon"><img src="{{ url ('mitra/fonts/editor.svg') }}" height="50px" width="50px" alt=""></span></div>
+              <div class="icon text-center"><img src="{{ url ('mitra/fonts/editor.svg') }}" height="50px" width="50px" alt=""></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">1 Siswa 1 Alat Praktek</h4>
                 <p>
@@ -102,7 +102,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="single_feature">
-              <div class="icon"><img src="{{ url ('mitra/fonts/medal.svg') }}" height="50px" width="50px" alt=""></span></div>
+              <div class="icon text-center"><img src="{{ url ('mitra/fonts/medal.svg') }}" height="50px" width="50px" alt=""></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Bersertifikat</h4>
                 <p>

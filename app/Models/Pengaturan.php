@@ -9,6 +9,6 @@ class Pengaturan extends Model
     protected $table = 'pengaturans';
     
     protected $fillable = [
-        'gambar_background'
+        'name_home', 'name_profil', 'gambar_home', 'gambar_profil', 'deskripsi', 'visi', 'misi', 'keunggulan', 'sambutan'
     ];
 }

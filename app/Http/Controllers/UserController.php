@@ -8,10 +8,9 @@ use App\Models\Siswa;
 use App\Models\Pengajar;
 use App\Models\Berita;
 use App\Models\Paket1;
-use App\Models\Paket2;
-use App\Models\Paket3;
-use App\Models\Paket4;
+use App\Models\Kerjasama;
 use App\Models\PaketKursus;
+use App\Models\Pengaturan;
 use DB;
 
 class UserController extends Controller
@@ -32,7 +31,10 @@ class UserController extends Controller
 
     public function profile()
     {
-        return view ('profil.index');
+        $kerjasamas = Kerjasama::all();
+        $pengaturans = Pengaturan::all();
+
+        return view ('profil.index', compact('kerjasamas', 'pengaturans'));
     }
 
     public function events()
@@ -58,7 +60,7 @@ class UserController extends Controller
     {
         $alumnis = DB::table('alumnis')->paginate(6);
 
-        return view('user.alumni', compact('alumnis'));
+        return view('alumni.index', compact('alumnis'));
     }
 
     public function berita() 
@@ -87,14 +89,14 @@ class UserController extends Controller
     {
         $kegiatans = DB::table('kegiatans')->paginate(12);
 
-        return view('user.kegiatan', compact('kegiatans'));
+        return view('kegiatan.index', compact('kegiatans'));
     }
 
     public function siswa()
     {
-        $siswas = DB::table('siswas')->paginate(6);
+        $siswas = DB::table('siswas')->paginate(12);
 
-        return view('user.siswa', compact('siswas'));
+        return view('siswa.index', compact('siswas'));
     }
 
     public function kursus()
@@ -113,8 +115,8 @@ class UserController extends Controller
 
     public function pengajar()
     {
-        $pengajars = DB::table('pengajars')->paginate(6);
+        $pengajars = DB::table('pengajars')->paginate(12);
 
-        return view('user.pengajar', compact('pengajars'));
+        return view('guru.index', compact('pengajars'));
     }
 }

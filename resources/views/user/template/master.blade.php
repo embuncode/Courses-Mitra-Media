@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="{{ url ('assets-user/images/mitra.png') }}">
-    <title>Selamat Datang di LKP Mitra Media</title>
+    <title>Mitra Media - Lembaga Kursus dan Pelatihan Komputer dan Jaringan</title>
 
     <!-- core CSS -->
     <link href="{{ url ('assets-user/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -58,6 +58,7 @@
             </div>
         </div><!--/.container-->    
     </section>
+    <br>
 
     <!-- Include Footer -->
 	@include('user.template.include.footer')

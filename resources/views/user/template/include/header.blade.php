@@ -1,35 +1,4 @@
 <header id="header">
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="top-number">
-                        <p>
-                            <i class="fa fa-whatsapp"></i> 0812-8088-357 / 0813-6614-4485
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="social">
-                        <ul class="social-share">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                        </ul>
-                        <div class="search">
-                            <form role="form">
-                                <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <nav class="navbar navbar-inverse" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -46,24 +15,11 @@
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav" id="nav">
-                    <li><a href="/">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/user/profile">Profile</a></li>
-                                <li><a href="/user/pengajar">Pengajar</a></li>
-                                <li><a href="/user/alumni">Alumni</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="/user/kursus">Kursus</a></li>
-                    <li><a href="/user/siswa">Siswa</a></li>
-                    <li><a href="/user/kegiatan">Kegiatan</a></li>
-                    <li><a href="/user/berita">Berita</a></li>
-                    <li><a href="/user/contact">Kontak</a></li>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="/user/berita"><b>Berita</b></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-
 </script>

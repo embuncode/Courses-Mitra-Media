@@ -15,7 +15,15 @@ class CreatePengaturansTable extends Migration
     {
         Schema::create('pengaturans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('gambar_background');
+            $table->string('name_home');
+            $table->string('name_profil');
+            $table->string('gambar_home');
+            $table->string('gambar_profil');
+            $table->mediumtext('deskripsi');
+            $table->mediumtext('visi');
+            $table->mediumtext('misi');
+            $table->mediumtext('keunggulan');
+            $table->mediumtext('sambutan');
             $table->timestamps();
         });
     }

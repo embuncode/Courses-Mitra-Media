@@ -9,10 +9,10 @@
           <div class="row justify-content-center">
             <div class="col-lg-6">
               <div class="banner_content text-center">
-                <h2>About Us</h2>
+                <h2>Profil</h2>
                 <div class="page_link">
                   <a href="index.html">Home</a>
-                  <a href="about-us.html">About Us</a>
+                  <a href="about-us.html">Profile</a>
                 </div>
               </div>
             </div>
@@ -28,25 +28,20 @@
         <div class="row h_blog_item">
           <div class="col-lg-6">
             <div class="h_blog_img">
-              <img class="img-fluid" src="img/about.png" alt="" />
+              <img class="img-fluid" style="width: 510px; height: 370px;" src="{{url ('mitra/img/about.png')}}" alt="" />
             </div>
           </div>
+
+          @foreach ($pengaturans as $pengaturan)
           <div class="col-lg-6">
             <div class="h_blog_text">
               <div class="h_blog_text_inner left right">
-                <h4>Welcome to our Institute</h4>
+                <h4>Selamat Datang di Mitra Media</h4>
                 <p>
-                  Subdue whales void god which living don't midst lesser
-                  yielding over lights whose. Cattle greater brought sixth fly
-                  den dry good tree isn't seed stars were.
+                    {!! $pengaturan->deskripsi !!}
                 </p>
-                <p>
-                  Subdue whales void god which living don't midst lesser yieldi
-                  over lights whose. Cattle greater brought sixth fly den dry
-                  good tree isn't seed stars were the boring.
-                </p>
-                <a class="primary-btn" href="#">
-                  Learn More <i class="ti-arrow-right ml-1"></i>
+                <a class="primary-btn" href="/kontak">
+                  Kontak Kami <i class="ti-arrow-right ml-1"></i>
                 </a>
               </div>
             </div>
@@ -62,56 +57,68 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="main_title">
-              <h2 class="mb-3 text-white">Awesome Feature</h2>
+              <h2 class="mb-3 text-white">Visi Dan Misi</h2>
               <p>
-                Replenish man have thing gathering lights yielding shall you
+                Mitra media memiliki Visi dan Misi sebagai berikut.
               </p>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6">
             <div class="single_feature">
-              <div class="icon"><span class="flaticon-student"></span></div>
+              <div class="icon text-center"><span class="flaticon-student"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Scholarship Facility</h4>
+                <h4 class="mt-3 mb-2 text-center">Visi</h4>
                 <p>
-                  One make creepeth, man bearing theira firmament won't great
-                  heaven
+                  {{ $pengaturan->visi }}
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6">
             <div class="single_feature">
-              <div class="icon"><span class="flaticon-book"></span></div>
+              <div class="icon text-center"><span class="flaticon-earth"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Sell Online Course</h4>
+                <h4 class="mt-3 mb-2 text-center">Misi</h4>
                 <p>
-                  One make creepeth, man bearing theira firmament won't great
-                  heaven
+                  {{ $pengaturan->misi }}
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6">
             <div class="single_feature">
-              <div class="icon"><span class="flaticon-earth"></span></div>
+              <div class="icon text-center"><span class="flaticon-earth"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Global Certification</h4>
+                <h4 class="mt-3 mb-2 text-center">Keunggulan</h4>
                 <p>
-                  One make creepeth, man bearing theira firmament won't great
-                  heaven
+                  {{ $pengaturan->keunggulan }}
                 </p>
               </div>
             </div>
           </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="single_feature">
+              <div class="icon text-center"><span class="flaticon-earth"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2 text-center">Sambutan</h4>
+                <p>
+                  {{ $pengaturan->sambutan }}
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
     <!--================ End Feature Area =================-->
+
+    @endforeach
 
     <!--================ Start Testimonial Area =================-->
     <div class="testimonial_area section_gap">
@@ -119,9 +126,9 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="main_title">
-              <h2 class="mb-3">Client say about me</h2>
+              <h2 class="mb-3">Kerja Sama Mitra Media</h2>
               <p>
-                Replenish man have thing gathering lights yielding shall you
+                Beberapa Perusahaan Yang Berkolaborasi Dengan Mitra Media
               </p>
             </div>
           </div>
@@ -129,108 +136,25 @@
 
         <div class="row">
           <div class="testi_slider owl-carousel">
+
+            @foreach ($kerjasamas as $kerjasama)
             <div class="testi_item">
               <div class="row">
                 <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
+                  <img src="{{ URL ($kerjasama->gambar) }}" style="width: 150px; height: 150px;" alt="" />
                 </div>
                 <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Elite Martin</h4>
+                  <div class="testi_text text-center">
+                    <h4>{{ $kerjasama->nama }}</h4>
                     <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
+                      {{ $kerjasama->deskripsi }}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Davil Saden</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Elite Martin</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Davil Saden</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Elite Martin</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>Davil Saden</h4>
-                    <p>
-                      Him, made can't called over won't there on divide there
-                      male fish beast own his day third seed sixth seas unto.
-                      Saw from
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
+
           </div>
         </div>
       </div>

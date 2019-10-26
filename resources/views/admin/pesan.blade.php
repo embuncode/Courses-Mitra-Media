@@ -44,7 +44,6 @@
                   <th>Nama</th>
                   <th>Email</th>
                   <th>Subject</th>
-                  <th>No Telepon</th>
                   <th>Jam Dikirim</th>
                   <th width="180px">Action</th>
                 </tr>
@@ -74,7 +73,7 @@
             { data: 'name', name: 'name' },
             { data: 'email', name: 'email' },
             { data: 'subject', name: 'subject' },
-            { data: 'number', name: 'number' },
+            
             { data: 'created_at', name: 'created_at' },
             { data: 'action', name: 'action', orderable: false, searchable: false},
         ]

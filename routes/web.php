@@ -117,10 +117,12 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/pengaturan', 'PengaturanController@index');
 	Route::get('/pengaturan/apiPengaturan', 'PengaturanController@apiPengaturan');
-	Route::post('/pengaturan', 'PengaturanController@store');
-	Route::get('/pengaturan/{pengaturan}/edit', 'PengaturanController@edit');
-	Route::PATCH('/pengaturan/{pengaturan}', 'PengaturanController@update');
-	Route::delete('/pengaturan/{pengaturan}', 'PengaturanController@destroy');
+	Route::get('/add-pengaturan', 'PengaturanController@create');
+	Route::post('/pengaturan-store', 'PengaturanController@store');
+	Route::get('/pengaturan/show/{id}', 'PengaturanController@show');
+	Route::get('/pengaturan/edit/{id}', 'PengaturanController@edit');
+	Route::post('/pengaturan/update/{id}', 'PengaturanController@update');
+	Route::get('/pengaturan/destroy/{id}', 'PengaturanController@destroy');
 
 });
 
@@ -128,10 +130,10 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/profil', 'UserController@profile');
 Route::get('/user/contact', 'PesanController@store');
 Route::get('/alumni', 'UserController@alumni');
-// Route::get('/pengajar', 'UserController@pengajar');
+Route::get('/pengajar', 'UserController@pengajar');
 Route::get('/kontak/detail/{id}', 'UserController@detail');
 
-Route::get('/berita', 'UserController@berita');
+// Route::get('/berita', 'UserController@berita');
 Route::get('/user/cari', 'UserController@cari');
 Route::get('/user/blog-single/{id}', 'BlogController@index');
 Route::post('/user/komentar', 'BlogController@komentar');

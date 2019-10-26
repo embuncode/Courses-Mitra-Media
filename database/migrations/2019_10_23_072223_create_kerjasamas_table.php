@@ -17,6 +17,7 @@ class CreateKerjasamasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->string('gambar');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }

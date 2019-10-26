@@ -36,6 +36,7 @@
         		    			<th width="10px">No</th>
                                 <th>Picture</th>
         		      			<th>Nama</th>
+                                <th>Deskripsi</th>
         		      			<th width="180px">Action</th>
         		    		</tr>
         		    	</thead>
@@ -77,6 +78,11 @@
                   <label for="exampleInputFile">Picture</label>
                   <input type="file" class="form-control file-upload" name="gambar" id="gambar">
                 </div>
+
+                <div class="form-group col-md-12">
+                    <label for="code">Deskripsi</label>
+                    <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Enter Deskripsi" value="{{ old('deskripsi') }}" required>
+                </div>
                 
                 <button type="submit" class="btn btn-primary">
                     <span class='glyphicon glyphicon-check'></span> Submit
@@ -105,6 +111,7 @@
             { data: 'DT_RowIndex', name: 'DT_RowIndex' },
             { data: 'show_picture', name: 'show_picture' },
             { data: 'nama', name: 'nama' },
+            { data: 'deskripsi', name: 'deskripsi' },
             { data: 'action', name: 'action', orderable: false, searchable: false},
         ]
     });
@@ -132,6 +139,7 @@
 
                 $('#id').val(data.id);
                 $('#nama').val(data.nama);
+                $('#deskripsi').val(data.deskripsi);
             },
 
             error :function() {

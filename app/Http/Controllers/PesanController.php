@@ -69,7 +69,7 @@ class PesanController extends Controller
 
         Pesan::create($input);
 
-        return redirect('/user/contact')->with('success', 'Terimakasih telah mengirim pesan!');
+        return redirect('/kontak')->with('success', 'Terimakasih telah mengirim pesan!');
     }
 
     /**

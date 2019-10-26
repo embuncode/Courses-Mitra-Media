@@ -9,6 +9,6 @@ class Kerjasama extends Model
     protected $table = 'kerjasamas';
     
     protected $fillable = [
-        'nama', 'gambar'
+        'nama', 'gambar', 'deskripsi'
     ];
 }
